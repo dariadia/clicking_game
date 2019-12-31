@@ -1,0 +1,23 @@
+{
+  "name": "ts_game",
+  "version": "1.0.0",
+  "description": "a typescript game set up with gulp",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "test ts_game"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariadia/ts_game.git"
+  },
+  "keywords": [
+    "typescript",
+    "game"
+  ],
+  "author": "dariadia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dariadia/ts_game/issues"
+  },
+  "homepage": "https://github.com/dariadia/ts_game#readme"
+}
