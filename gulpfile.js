@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var stylus = require("gulp-stylus");
 var browserify = require("browserify");
 var source = require("vinyl-source-stream");
 var tsify = require("tsify");
@@ -18,7 +19,7 @@ gulp.task(
     return browserify({
       basedir: ".",
       debug: true,
-      entries: ["src/main.ts"],
+      entries: ["src/ts/main.ts"],
       cache: {},
       packageCache: {}
     })
@@ -35,3 +36,14 @@ gulp.task(
       .pipe(gulp.dest("dist"));
   })
 );
+
+gulp.task("styles", function() {
+  return gulp
+    .src("src/css/styles.styl")
+    .pipe(
+      stylus({
+        compress: true
+      })
+    )
+    .pipe(gulp.dest("dist/css"));
+});
